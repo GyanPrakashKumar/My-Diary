@@ -1,0 +1,322 @@
+# Status Codes:
+
+- Status code describe the type of response sent to the browser.
+Example: 200 - OK, 301 - Resourse Moved, 404 - Not Found etc.
+
+* 100 Range - Informational response
+* 200 Range - Success codes
+* 300 Range - Codes for redirects
+* 400 Range - User or Client error codes
+* 500 Range - Server error codes
+
+
+# REDIRECTS: 
+
+- Redirects are a way of sending both users and search engines to a different URL from the one they originally requested.
+- There are several different types of redirects available to web developers, including manual redirects, HTTP 3xx series redirects, and JavaScript-based redirects.
+- Redirects are used when moving content to a new URL, when deleting pages or when changing domain names or merging websites.
+- Redirects are also used to redirect users to the HTTPS version of a URL from the HTTP version.
+
+# View Engine / Template Engine
+- Template engines are used when you want to rapidly build web applications that are split into different components. Templates also enable fast rendering of the server-side data that needs to be passed to the application.
+- For example, you might want to have components such as body, navigation, footer, dashboard, etc.
+- Template engines are mostly used for server-side applications that are run on only one server and are not built as APIs. The popular ones include Ejs, Jade, Pug, Mustache, HandlebarsJS, Jinja2, and Blade.
+- When you build a server-side application with a template engine, the template engine replaces the variables in a template file with actual values, and displays this value to the client. This makes it easier to quickly build our application.
+
+# EJS
+- EJS is a simple templating language that lets you generate HTML markup with plain JavaScript.
+- EJS is a template system. You define HTML pages in the EJS syntax and specify where various data will go in the page. You then have a Node.js module that takes your data and inserts it into the page, producing a final HTML page that is sent to the client.
+- EJS is a simple templating language that lets you generate HTML markup with plain JavaScript. No religiousness about how to organize things. No reinvention of iteration and control-flow. It's just plain JavaScript.
+
+# Nodemon
+- Nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
+- Nodemon does not require any additional changes to your code or method of development. Nodemon is a replacement wrapper for node, to use nodemon replace the word node on the command line when executing your script.
+
+# NPM
+- NPM is a package manager for Node.js packages, or modules if you like.
+- www.npmjs.com hosts thousands of free packages to download and use.
+- The NPM program is installed on your computer when you install Node.js
+- NPM is already ready to run on your computer!
+- A package in Node.js contains all the files you need for a module.
+- Modules are JavaScript libraries you can include in your project.
+
+# Package.json
+- The package.json file is the heart of Node.js system. It is a simple text file that contains metadata of your Node.js project.
+- The package.json file is normally located at the root directory of a Node.js project.
+- The package.json file is normally created during the initialization of the project.
+- The package.json file is normally maintained manually.
+- The package.json file is normally committed to the version control system (VCS) repository.
+
+# Package-lock.json
+- The package-lock.json is automatically generated for any operations where npm modifies either the node_modules tree, or package.json. It describes the exact tree that was generated, such that subsequent installs are able to generate identical trees, regardless of intermediate dependency updates.
+- This file is intended to be committed into source repositories, and serves various purposes:
+    * Describe a single representation of a dependency tree such that teammates, deployments, and continuous integration are guaranteed to install exactly the same dependencies.
+    * Provide a facility for users to "time-travel" to previous states of node_modules without having to commit the directory itself.
+    * To facilitate greater visibility of tree changes through readable source control diffs.
+    * And optimize the installation process by allowing npm to skip repeated metadata resolutions for previously-installed packages.
+
+# NPM Scripts
+- NPM scripts are defined in the package.json file of your project.
+- NPM scripts is a built-in tool that allows you to run scripts from the command line.
+
+# NPM Install
+- npm install downloads a package and it's dependencies. npm install can be run with or without arguments. When run without arguments, npm install downloads dependencies defined in a package. json file and generates a node_modules folder with the installed modules.
+- npm install can be run with or without arguments. When run without arguments, npm install downloads dependencies defined in a package.json file and generates a node_modules folder with the installed modules.
+- When run with arguments, npm install downloads specific modules to the node_modules folder.
+
+# NPM Audit
+- npm audit is a new command released with npm@6 which performs a moment-in-time security audit of your project's dependency tree.
+- It can be run any time after the initial installation, and will always do the following:
+    * Perform a traversal of the dependency graph defined by the package-lock.json file to identify explicitly installed dependencies.
+    * For each dependency, use the npm registry to identify publicly known vulnerabilities.
+    * Produce a report detailing any dependencies that have publicly known vulnerabilities, along with instructions on how to update to a newer, patched version.
+
+
+# Middleware
+- Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
+- Middleware is a function that has access to the request and response object. It can execute any code, transform the request object, or return a response.
+- Middleware functions can perform the following tasks:
+    * Execute any code.
+    * Make changes to the request and the response objects.
+    * End the request-response cycle.
+    * Call the next middleware function in the stack.
+- If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.
+
+Middleware can be used to implement a variety of tasks, such as:
+- Logging HTTP requests and responses
+- Authenticating users
+- Managing sessions
+- Handling errors
+- Caching data
+- Compressing data
+- Serving static files
+
+Here are some examples of middleware functions:
+- A logging middleware function might log the request URL, the request method, and the user's IP address.
+- An authentication middleware function might check if the user is logged in before allowing them to access a particular resource.
+- A session management middleware function might create a session object for the user and store it in a database.
+- An error handling middleware function might handle errors that occur during the request lifecycle.
+- A caching middleware function might cache data in memory so that it can be retrieved more quickly.
+- A compression middleware function might compress data so that it can be transmitted more efficiently.
+- A static files middleware function might serve static files, such as images, CSS files, and JavaScript files.
+
+# Third Party Middleware: Morgan
+- Morgan is a HTTP request logger middleware for Node.js. It simplifies the process of logging requests to your application.
+- Morgan is a middleware that logs HTTP requests to the console. It is a third-party middleware that is not included in Express by default.
+- Morgan is a popular, simple, and easy to use HTTP request logger middleware for Node.js. It simplifies the process of logging requests to your application.
+- Morgan is a third-party middleware that is not included in Express by default. To use it, you need to install it using npm install morgan.
+- Morgan supports the following logging formats:
+    * combined: Standard Apache combined log output.
+    * common: Standard Apache common log output.
+    * dev: Concise output colored by response status for development use.
+    * short: Shorter than default, also including response time.
+    * tiny: The minimal output.
+
+# Static Files
+- Static files are files that clients download as they are from the server. They can be images, CSS files, JS files, fonts, etc.
+
+# Express.static
+- Express.static is a built-in middleware function in Express. It serves static files and is based on serve-static.
+- The function signature is:
+    * express.static(root, [options])
+- The root argument specifies the root directory from which to serve static assets.
+- The following example will serve images, CSS files, and JavaScript files in a directory named public:
+    * app.use(express.static('public'))
+- To create a virtual path prefix (where the path does not actually exist in the file system) for files that are served by the express.static function, specify a mount path for the static directory, as shown below:
+    * app.use('/static', express.static('public'))
+- Now, you can load the files that are in the public directory from the /static path prefix.
+- Multiple static assets directories can be configured using express.static middleware.
+- The following example illustrates how to serve static assets from multiple directories:
+    * app.use(express.static('public'))
+    * app.use(express.static('files'))
+- Now, you can load the files that are in the public directory and the files directory from the /static path prefix.
+
+
+## Database 
+
+# NoSQL vs SQL
+- SQL databases are primarily called as Relational Databases (RDBMS); whereas NoSQL database are primarily called as non-relational or distributed database.
+- SQL databases are table based databases whereas NoSQL databases are document based, key-value pairs, graph databases or wide-column stores. This means that SQL databases represent data in form of tables which consists of n number of rows of data whereas NoSQL databases are the collection of key-value pair, documents, graph databases or wide-column stores which do not have standard schema definitions which it needs to adhered to.
+- SQL databases have predefined schema whereas NoSQL databases have dynamic schema for unstructured data.
+- SQL databases are vertically scalable whereas the NoSQL databases are horizontally scalable. SQL databases are scaled by increasing the horse-power of the hardware. NoSQL databases are scaled by increasing the databases servers in the pool of resources to reduce the load.
+- SQL databases uses SQL ( structured query language ) for defining and manipulating the data, which is very powerful. In NoSQL database, queries are focused on collection of documents. Sometimes it is also called as UnQL (Unstructured Query Language). The syntax of using UnQL varies from database to database.
+- SQL database examples: MySql, Oracle, Sqlite, Postgres and MS-SQL. NoSQL database examples: MongoDB, BigTable, Redis, RavenDb, Cassandra, Hbase, Neo4j and CouchDb
+- For complex queries: SQL databases are good fit for the complex query intensive environment whereas NoSQL databases are not good fit for complex queries. On a high-level, NoSQL don’t have standard interfaces to perform complex queries, and the queries themselves in NoSQL are not as powerful as SQL query language.
+- For the type of data to be stored: SQL databases are not best fit for hierarchical data storage. But, NoSQL database fits better for the hierarchical data storage as it follows the key-value pair way of storing data similar to JSON data. NoSQL database are highly preferred for large data set (i.e for big data). Hbase is an example for this purpose.
+
+# MongoDB
+- MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.
+- MongoDB is a document database, which means it stores data in JSON-like documents. We believe this is the most natural way to think about data, and is much more expressive and powerful than the traditional row/column model.
+- MongoDB is a distributed database at its core, so high availability, horizontal scaling, and geographic distribution are built in and easy to use.
+- MongoDB is free and open-source, published under the GNU Affero General Public License.
+
+# Mongoose
+- Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.
+- Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.
+- Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports both promises and callbacks.
+
+# Documents in MongoDB
+- In MongoDB, a document is a big JSON blob with no particular format or schema. Documents are analogous to records or rows in a relational database such as MySQL or PostgreSQL, but they have a dynamic schema instead of a fixed schema. This means that in a collection, different documents can have different fields and structures.
+- Documents are analogous to records or rows in a relational database such as MySQL or PostgreSQL, but they have a dynamic schema instead of a fixed schema. This means that in a collection, different documents can have different fields and structures.
+
+# Collections in MongoDB
+- A collection is a grouping of MongoDB documents. A collection is the equivalent of a table in a relational database. A collection exists within a single database. Collections do not enforce a schema. Documents within a collection can have different fields. Typically, all documents in a collection are of similar or related purpose.
+
+# Schema in MongoDB
+- A schema is a description of the structure of data in a collection. A schema is analogous to a table definition in a relational database. A schema defines the fields in a collection, their data types, and default values. It also defines the format of the data that can be stored in the collection. A schema is optional in MongoDB. If you don't define a schema, MongoDB will not enforce any structure on your data and you can store any data in any format in the collection.
+
+# Create Database in MongoDB
+- MongoDB stores data in collections. Collections are analogous to tables in relational databases. A collection exists within a single database. Collections do not enforce a schema. Documents within a collection can have different fields. Typically, all documents in a collection are of similar or related purpose.
+- To create a database in MongoDB, you need to use the `use DATABASE_NAME` statement. The following example creates a database named mydb:
+    * use mydb
+- If the database mydb doesn't exist, then MongoDB will create it for you. However, it will only be created when you insert some data into it!
+- To check if you are in the right database, use the command `db`. The following example checks if you are in the mydb database:
+    * db
+- To see all databases, use the command `show dbs`. The following example shows all databases:
+    * show dbs
+- To delete a database, use the command `db.dropDatabase()`. The following example deletes the mydb database:
+    * db.dropDatabase()
+
+# Create Collection in MongoDB
+- MongoDB stores data in collections. Collections are analogous to tables in relational databases. A collection exists within a single database. Collections do not enforce a schema. Documents within a collection can have different fields. Typically, all documents in a collection are of similar or related purpose.
+- To create a collection in MongoDB, use the `db.createCollection()` method. The method accepts the following parameters:
+    * name: The name of the collection to be created.
+    * options: Optional. A document that specifies the configuration of the collection.
+- The following example creates a collection named customers:
+    * db.createCollection("customers")
+- To check if a collection exists, use the `db.getCollectionNames()` method. The method returns an array of strings that represent the names of the collections in the current database. The following example checks if the customers collection exists:
+    * db.getCollectionNames()
+- To delete a collection, use the `db.COLLECTION_NAME.drop()` method. The following example deletes the customers collection:
+    * db.customers.drop()
+
+# Insert Documents in MongoDB
+- To insert a record, or document as it is called in MongoDB, into a collection, we use the `insertOne()` method. The method accepts two parameters:
+    * A JSON document to insert.
+    * A callback function.
+- The following example inserts a new document into the customers collection:
+    * db.customers.insertOne(
+        {
+            first_name: "John",
+            last_name: "Doe"
+        }
+    )
+- To insert multiple documents into a collection in MongoDB, we use the `insertMany()` method. The method accepts two parameters:
+    * An array of JSON documents to insert.
+    * A callback function.
+- The following example inserts three new documents into the customers collection:
+    * db.customers.insertMany([
+        {
+            first_name: "John",
+            last_name: "Doe"
+        },
+        {
+            first_name: "Jane",
+            last_name: "Doe"
+        },
+        {
+            first_name: "Alice",
+            last_name: "Smith"
+        }
+    ])
+    
+# Find Documents in MongoDB
+- To select data from a collection in MongoDB, we can use the `findOne()` method. The method accepts two parameters:
+    * A query object.
+    * A callback function.
+- The following example selects the first document from the customers collection:
+    * db.customers.findOne()
+- To select data from a table in MongoDB, we can also use the `find()` method. The method accepts two parameters:
+    * A query object.
+    * A callback function.
+- The following example selects all documents from the customers collection and returns them as an array:
+    * db.customers.find().toArray()
+- To select only the fields that you need, pass the fields that you need to the `find()` method. The following example selects only the first_name and last_name fields from the customers collection:
+    * db.customers.find({}, {first_name: 1, last_name: 1}).toArray()
+- To limit the number of documents returned from the query, use the `limit()` method. The following example selects only the first two documents from the customers collection:
+    * db.customers.find().limit(2).toArray()
+- To sort the documents returned by the query, use the `sort()` method. The method accepts one parameter which is a document that defines the sort order. The document contains field(s) and sort order(s). The sort order can be set to 1 for ascending order and -1 for descending order. The following example sorts the documents by the first_name field in ascending order:
+    * db.customers.find().sort({first_name: 1}).toArray()
+- To update a document in MongoDB, use the `updateOne()` method. The method accepts three parameters:
+    * A query object to determine which document to update.
+    * An object containing the fields to update.
+    * A callback function.
+- The following example updates the document with the address "Valley 345" to "Canyon 123":
+    * db.customers.updateOne(
+        { address: "Valley 345" },
+        {
+            $set: { address: "Canyon 123" }
+        }
+    )
+- To update multiple documents, use the `updateMany()` method. The method accepts three parameters:
+    * A query object to determine which documents to update.
+    * An object containing the fields to update.
+    * A callback function.
+- The following example updates all documents where the address starts with the letter "S":
+    * db.customers.updateMany(
+        { address: /^S/ },
+        {
+            $set: { address: "Canyon 123" }
+        }
+    )
+- To delete a document in MongoDB, use the `deleteOne()` method. The method accepts two parameters:
+    * A query object to determine which document to delete.
+    * A callback function.
+- The following example deletes the first document in the customers collection where the address starts with the letter "O":
+    * db.customers.deleteOne({ address: /^O/ })
+- To delete multiple documents in MongoDB, use the `deleteMany()` method. The method accepts two parameters:    
+    * A query object to determine which documents to delete.
+    * A callback function.  
+- The following example deletes all documents in the customers collection where the address starts with the letter "O":
+    * db.customers.deleteMany({ address: /^O/ })
+
+# CRUD Operations in MongoDB
+- CRUD stands for Create, Read, Update, and Delete. CRUD operations are basic data manipulation for database. We've already learned how to perform create (i.e. insert), read (i.e. select), update and delete operations in previous chapters. In this chapter we are going to study how to perform other operations using MongoDB.
+- The following table shows all the CRUD operations in MongoDB:
+    * Create: db.COLLECTION_NAME.insertOne()
+    * Read: db.COLLECTION_NAME.find()
+    * Update: db.COLLECTION_NAME.updateOne()
+    * Delete: db.COLLECTION_NAME.deleteOne()
+
+
+# Request type
+- GET: The GET method requests a representation of the specified resource. Requests using GET should only retrieve data.
+- POST: The POST method is used to submit an entity to the specified resource, often causing a change in state or side effects on the server.
+- PUT: The PUT method replaces all current representations of the target resource with the request payload.
+- DELETE: The DELETE method deletes the specified resource.
+- PATCH: The PATCH method is used to apply partial modifications to a resource.
+- OPTIONS: The OPTIONS method is used to describe the communication options for the target resource.
+- HEAD: The HEAD method asks for a response identical to that of a GET request, but without the response body.
+
+In the project we use :
+- GET: To get the data from the database.
+    *  http://localhost:3000/blogs
+    *  http://localhost:3000/blogs/:id
+    *  http://localhost:3000/blogs/:id/edit
+- POST: To post the data to the database.
+    * http://localhost:3000/blogs/create
+    * http://localhost:3000/blogs
+- DELETE: To delete the data from the database.
+    * http://localhost:3000/blogs/:id
+
+
+## MVC Pattern
+- MVC is a software design pattern for developing web applications. It is a way of structuring the codebase of an application into three distinct logical components:
+    * Model: The model represents the data and business logic of the application. It is responsible for managing the data of the application. It receives user input from the controller.
+    * View: The view is responsible for displaying the data provided by the model in a specific format. It receives data from the controller and renders it to the user.
+    * Controller: The controller is responsible for handling user requests and data flow between the model and the view. It receives user input from the view and sends it to the model for processing. It also handles errors and exceptions.
+- The MVC pattern helps you create applications that are more modular and easier to maintain. It also makes it easier to reuse code in different parts of the application.
+- The MVC pattern is widely used in web applications. It is also used in desktop and mobile applications.
+
+# Model
+- The model represents the data and business logic of the application. It is responsible for managing the data of the application. It receives user input from the controller.
+- The model is responsible for managing the data of the application. It receives user input from the controller.
+
+# View
+- The view is responsible for displaying the data provided by the model in a specific format. It receives data from the controller and renders it to the user.
+
+# Controller
+- The controller is responsible for handling user requests and data flow between the model and the view. It receives user input from the view and sends it to the model for processing. It also handles errors and exceptions.
+
+# MVC in Express
+- Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+
