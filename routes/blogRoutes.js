@@ -1,6 +1,6 @@
 const express = require('express');
 const diary = require('../module/diary');
-
+// route -> path
 const router = express.Router();
 
 // Show all blogs
